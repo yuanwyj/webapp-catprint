@@ -1,0 +1,37 @@
+/* pages/service/service.wxss */
+page {
+    height: 100%;
+    background: beige;
+}
+.container {
+    background: floralwhite;
+    padding:100rpx 0;
+
+}
+/*公共样式*/
+.box {
+    width:220rpx;
+    height:220rpx;
+    margin:26rpx 0;
+    text-align:center;
+    color:#000;
+    border:1rpx solid #ccc;
+    border-radius:15rpx;
+    padding:12rpx;
+    background:#fff;
+    box-shadow:10px 10px 5px #888888;
+}
+.box image {
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 auto;
+}
+.box label {
+    display:inline-block;
+    margin:15rpx 0;
+}
+.get-order image {
+    margin-top:15rpx;
+    width: 130rpx;
+    height: 130rpx;
+}

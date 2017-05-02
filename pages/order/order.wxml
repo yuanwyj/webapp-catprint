@@ -1,0 +1,27 @@
+<!--pages/order/order.wxml-->
+<view class="container">
+    <!--订单列表-->
+    <view wx:for="{{ orderList }}" class="order-wrapper">
+        <!--Top-->
+        <view class="top">
+            <text>{{ item.nickname }}</text>
+            <image src="/images/address.png"></image>
+        </view>
+        <!--订单信息-->
+        <view class="order">
+            <image src="/images/doc.png"></image>
+            <view class="info">
+                <text>{{item.sourcefilename}}</text>
+                <text class="color" wx:if="{{ item.bsingle }}" >{{ item.bsingle }}页x{{ item.goods_number }}份 黑白 单面</text>
+                <text class="color" wx:if="{{ item.csingle }}">{{ item.csingle }}页x {{ item.goods_number }}份 彩色 单面</text>
+                <text class="color" wx:if="{{ item.bdouble }}" >{{ item.bdouble }}页x{{ item.goods_number }}份 黑白 双面</text>
+                <text class="color" wx:if="{{ item.cdouble }}" >{{ item.cdouble }}页x{{ item.goods_number }}份 彩色 双面</text>
+            </view>
+        </view>
+        <!--支付信息-->
+        <view class="top">
+            <text class="price">￥{{ item.total_price }}</text>
+            <button size="mini">已支付</button>
+        </view>
+    </view>
+</view>

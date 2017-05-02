@@ -1,0 +1,82 @@
+<!--pages/files/files.wxml-->
+<view class="container">
+    <!--文件搜索-->
+    <!--<view class="search-file">
+        <input type="text" placeholder="搜索文件" confirm-type="search" />
+    </view>-->
+    <!--文件列表-->
+    <view wx:if="{{fileListDisplay}}" class="file-list">
+        <view wx:for-index="idx"  wx:for="{{ fileList}}" class="box">
+            <!--文件上传时间-->
+            <text>{{idx}}</text>
+            <view class="file-wraper">
+                <view  wx:for="{{item}}"  wx:for-item="file" class="file" wx:key="{{ index }}">
+                    <image src="/images/doc.png"></image>
+                    <view class="file-info">
+                        <text>{{file.fileName}}</text>
+                        <text class="file-num">{{file.num}}页</text>
+                    </view>
+                    <view class="hidebox">
+                        <!--预览-->
+                        <view class="preview">
+                            <view bindtap="doprint" data-file="{{file}}" class="active">
+                                <image src="/images/print2.png"></image>
+                                <text>打印</text>
+                            </view>                       
+                            <view bindtap="preview" data-itemid="{{file.itemId}}" class="active">
+                                <image src="/images/preview.png"></image>
+                                <text>预览</text>
+                            </view>   
+                            <view bindtap="delFile" data-itemid="{{file.itemId}}" data-index="{{ index }}" data-idx="{{ idx }}" class="active">
+                                <image src="/images/del.png"></image>
+                                <text>删除</text>
+                            </view>                     
+                        </view>                   
+                    </view>
+                </view>                       
+            </view>
+            <!--{{ item[0].fileName }}-->
+           
+            <!--files item -->
+        </view>
+    </view>
+    <!--打印模态框-->
+    <view class="print_form" wx:if="{{printFormDisplay}}">
+        <!--打印信息-->
+        <view class="print-wrapper">
+            <view class="print-wrapper-top">
+                <image src="/images/doc.png"></image>
+                <view class="file-info">
+                    <view>{{ printFile.fileName }}</view>
+                    <view class="filenum">{{ printFile.num }}页</view>
+                </view>
+                <icon bindtap="closePrintForm" type="clear" />
+            </view> 
+            <view class="print-wrapper-form">
+                <view bindtap="selSingle" class="file-page">
+                    <view style="{{single}}">单页</view>
+                    <view style="{{double}}">双页</view>
+                </view>
+                <view bindtap="selColor" class="file-page">
+                    <view style="{{black}}">黑白</view>
+                    <view style="{{color_full}}">彩色</view>
+                </view>
+            </view>
+            <view class="copies">
+                <view class="words">打印份数</view>
+                <view class="copies-btn">
+                    <view style="{{ nominus }}" bindtap="minus" class="copies-operation">-</view>
+                    <view class="copies-num"><input bindinput="copienum" type="number" value="{{ printInfo.copies_num }}" /></view>
+                    <view style="{{ noplus }}" bindtap="plus" class="copies-operation">+</view>
+                </view>
+            </view>
+            <view class="next">
+                <!--<image src="/images/next.png"></image>-->
+                <navigator url="/pages/merchants/merchants">
+                    <image src="/images/next.png"></image>
+                </navigator>
+            </view>
+            <view style="text-align:center; color: red;font-weight:bold;">注： 一次只能打印一个文件</view>
+        </view>
+    </view>
+</view>

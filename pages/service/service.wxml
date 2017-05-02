@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+    <!--文件云库-->
+    <view bindtap="pathTocloudpage" class="box cloud-data">
+       <image src="/images/file.png"></image>
+        <label>文件云库</label>
+    </view>
+    <!--我的订单-->
+    <view bindtap="pathToOrderpage" class="box order">
+        <image src="/images/order.png"></image>
+        <label>我的订单</label>
+    </view>
+    <!--取单扫码-->
+    <view bindtap="pathToGetOrderpage" class="box get-order">
+        <image src="/images/code.png"></image>
+        <label>取单扫码</label>
+    </view>
+</view>

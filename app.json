@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/service/service",
+    "pages/user/user",
+    "pages/files/files",
+    "pages/order/order",
+    "pages/merchants/merchants"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#2A8CE5",
+    "backgroundColor": "#555",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "发现",
+      "iconPath": "/images/search.png",
+      "selectedIconPath": "/images/search.png"
+    }, {
+      "pagePath": "pages/service/service",
+      "text": "打印",
+      "iconPath": "/images/print.png",
+      "selectedIconPath": "/images/print.png"    
+    }, {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "/images/mine.png",
+      "selectedIconPath": "/images/mine.png"  
+    }]
+  }
+}

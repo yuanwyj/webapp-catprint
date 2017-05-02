@@ -1,0 +1,192 @@
+/* pages/files/files.wxss */
+page {
+    height: 100%;
+    background: rgb(245, 245, 245);
+}
+.container {
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.search-file {
+    padding: 20rpx;
+    background: rgb(224, 224, 224);
+    width: 100%;
+}
+.search-file input{
+    margin:0 20rpx;
+    text-align:center;
+    background:#fff;
+    border-radius: 15rpx;
+}
+.file-list {
+    width: 100%;
+    margin-top: 1rpx;
+}
+.box text{
+    margin:20rpx 15rpx;
+    display:block;
+    font-weight: bold;
+}
+.file-wraper {
+    overflow: hidden;
+}
+.file {
+    width:45%;
+    margin:20rpx 2rpx;
+    height:137rpx;
+    background:#fff;
+    padding:15rpx;
+    border-radius:5rpx;
+    box-shadow:3px 3px 1px rgb(224, 224, 224);
+    float: left;
+    display: flex;
+    position: relative;
+}
+.hidebox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.72);
+    display: none;
+    border-radius: 5rpx;
+    color: #fff;
+}
+.preview {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.active {
+    padding-top: 26rpx;
+    margin:0 25rpx;
+}
+.box .preview .active text {
+    margin: 0;
+    font-size: .8rem;
+    padding-left: 10rpx;
+}
+.file .preview image {
+    width: 70rpx;
+    height: 70rpx;
+}
+.file:hover .hidebox{
+    display: block;
+}
+.file image {
+    width:115rpx;
+    height:131rpx;
+}
+.file-info {
+    width: 70%;
+    position: relative;
+}
+.file-info text {
+    display: block;
+    font-size: .8rem;
+    margin:0 20rpx;
+    color: #000;
+    font-weight: 300;
+    word-break:normal; 
+    width:auto; 
+    white-space:pre-wrap;
+    word-wrap : break-word ;
+    overflow: hidden ;
+}
+.file-info .file-num {
+    color: rgb(117, 117, 117);  
+    position: absolute;
+    bottom: 0;
+    font-size:1rem;
+}
+
+.print_form {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.print-wrapper {
+    width: 80%;
+    height: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 15rpx;
+    padding:30rpx;
+    position: absolute;
+}
+.print-wrapper-top {
+    display: flex;
+
+}
+.print-wrapper-top image{
+    width:100rpx;
+    height:120rpx;
+}
+.file-info {
+    padding-left: 20rpx;
+    font-weight: bold;
+}
+.filenum {
+    margin-top:20rpx;
+    color:#aaa;
+}
+.print-wrapper-form {
+    display: flex;
+    justify-content: space-between;
+    padding-top:45rpx;
+}
+.file-page {
+    display:flex;
+    width:47%;
+    height:60rpx;
+    border:.3rpx solid olivedrab;
+    text-align:center;
+    border-radius:5rpx;
+    line-height:60rpx;
+    color: olivedrab;
+    font-size: .8rem;
+}
+.file-page view {
+    width: 50%;
+}
+.copies {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45rpx;
+}
+.words {
+    font-size: .8rem;
+    font-weight: bold;
+}
+.copies-btn {
+    display: flex;
+    border: .2rpx solid olivedrab;
+    text-align: center;
+    line-height: 60rpx;
+}
+.copies-operation {
+    width: 103rpx;
+    height: 60rpx;
+}
+.copies-num {
+    width: 83rpx;
+    background: olivedrab;
+    color: #fff;
+}
+.next {
+    width: 100%;
+    text-align: center;
+    padding: 115rpx 0;
+}
+.next image{
+    width: 150rpx;
+    height: 120rpx;
+}

@@ -1,0 +1,152 @@
+/* pages/user/user.wxss */
+page {
+    background-color:beige;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    background-size:100% 100%; 
+}
+.unlogin {
+    background-image: url('/images/bg.jpg');
+    background-size:100% 100%;
+}
+/*用户信息*/
+.userMsg {
+    width: 100%;
+    position: relative;
+    background: #ffffff;
+    height: 270rpx;
+}
+.imgbox{
+    width:170rpx;
+    height:170rpx;
+    left:50%;
+    position:absolute;
+    transform:translateX(-50%);
+    top:-85rpx;
+}
+.imgbox image {
+    padding:1rpx;
+    border-radius: 50%;
+    border: solid #ffffff;
+    width: 100%;
+    height: 100%;
+}
+/*详细信息*/
+.info {
+    position: absolute;
+    top: 100rpx;
+    width: 100%;
+}
+.info button {
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+.info text:nth-child(1) {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+}
+.info text:nth-child(2) {
+    display: block;
+    text-align: center;
+}
+/*用户操作*/
+.userActivity {
+    width: 100%;
+    background: #ffffff;
+}
+.nickname {
+    border-top:1px solid #ccc;
+}
+.com input {
+    width:100%;
+    display:inline-block;
+    height:96rpx;
+    color:olivedrab;
+    font-size:1.1rem;
+    text-align: center;
+}
+.com {
+    margin-left:2%;
+    border-bottom:1rpx solid #ccc;
+    height: 100rpx;
+    position: relative;
+}
+.ain {
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 100%;
+}
+.ain text {
+    height: 100%;
+    width: 98%;
+    line-height: 100rpx;
+    border-bottom: 1rpx solid #ccc;
+    display: block;
+    margin-left: 2%;
+}
+.ain:hover {
+    background: #ccc;
+}
+.sex radio-group {
+    display:inline-block;
+    position:absolute;
+    top:23rpx;
+    left:50%;
+    transform: translateX(-50%);
+}
+.nickname text {
+    position: absolute;
+    top: 30rpx;
+}
+.sex text {
+    position: absolute;
+    bottom: 30rpx;
+}
+.school text {
+    position: absolute;
+    bottom: 30rpx;
+}
+/*未登录*/
+.haslogin {
+    padding: 0;
+}
+.topimg {
+    width: 100%;
+}
+.topimg image {
+    width: 100%;
+}
+.login {
+    padding:50rpx;
+    margin-top: 150rpx;
+    background-color: #ffffff;
+    border-radius: 15rpx;
+}
+.wrapper input {
+    border:1rpx solid #ccc;
+    height:92rpx;
+    margin:19rpx 0;
+    line-height:98rpx;
+    border-radius:10rpx;
+    padding-left:15rpx;
+}
+.btn-area button {
+    height: 80rpx;
+    line-height: 80rpx;
+    background:yellowgreen;
+    color: #ffffff;
+}
+picker {
+    display:block;
+    position:absolute;
+   transform:translateX(-50%);
+    left:50%;
+    height:100%;
+    line-height:100rpx;
+    text-align:center;
+
+}

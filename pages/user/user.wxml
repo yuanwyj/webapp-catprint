@@ -1,0 +1,85 @@
+<!--pages/user/user.wxml-->
+
+<view wx:if="{{ loginForm }}" class="container haslogin">
+    <!--顶部轮播图-->
+    <view class="topimg">
+        <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150"/>
+            </swiper-item>
+        </block>
+        </swiper>
+    </view>
+    <!--用户信息-->
+    <view class="userMsg">
+        <!--用户头像-->
+        <view bindtap="uploadFace" class="imgbox">
+            <image src="/images/bg.jpg"></image>
+        </view>
+        <!--详细信息-->
+        <view class="info">
+            <text>Boss yuan</text>
+            <text>中山大学中山医学院</text> 
+            <button size="mini" bindtap="showEditMsgForm">{{btntext}}</button>     
+        </view>
+    </view>
+    <!--用户操作-->
+    <view class="userActivity">
+        <!--用户修改信息表单-->
+        <block wx:if="{{showEditForm}}">
+            <view class="com nickname">
+                <text>昵称</text><input type="text" maxlength="10" bindinput="bindNicknameInput"/>
+            </view>
+            <view class="com sex">
+                <text>性别</text>
+                <radio-group bindchange="radioChangeSex">
+                    <label><radio value="man"/>男</label>
+                    <label><radio value="woman"/>女</label>
+                    <label><radio value="secrecy"/>保密</label> 
+                </radio-group>
+            </view>
+            <view class="com school">
+                <text>学校选择</text>
+                  <picker bindchange="bindPickerChange" value="{{index}}" range="{{ school }}">
+                        <view class="picker">
+                        {{school[index]}}
+                        </view>
+                 </picker>
+            </view>   
+            <view class="com school">
+                <text>专业选择</text>
+                <picker bindchange="bindPickeracademyChange" value="{{index}}" range="{{ academy }}">
+                        <view class="picker">
+                        {{oll_academy[academy_index].name}}
+                        </view>
+                 </picker>
+            </view>
+        </block>
+        <!--清理缓存-->
+        <view class="clean ain">
+            <text>清理缓存</text>
+        </view>
+        <!--推出登陆-->
+        <view bindtap="loginout" class="sign-out ain">
+            <text>退出登录</text>
+        </view>
+    </view>
+</view>
+<view wx:else class="container unlogin">
+    <!--<view wx:if="{{loginForm}}"> 
+        <view class="qwer">登陆成功</view>
+    </view>-->
+    <view class="login">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <view class="wrapper">
+                <input type="number" name="username" placeholder="手机号"  />
+                <input type="password" name="password" placeholder="密码" />
+            </view>
+            <view class="btn-area">
+                <button formType="submit">登陆</button>
+            </view>
+        </form>
+    </view>
+</view>

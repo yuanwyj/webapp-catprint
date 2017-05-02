@@ -1,0 +1,62 @@
+/* pages/order/order.wxss */
+page {
+     background: rgb(245, 245, 245);
+}
+.container {
+    padding: 0;
+}
+.order-wrapper {
+    width: 92%;
+    background: #fff;
+    margin: 15rpx 0;
+    border-radius: 15rpx;
+}
+.top {
+    height:85rpx;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:92%;
+    margin:0 auto;
+
+}
+.top image {
+    width: 50rpx;
+    height: 56rpx;
+}
+.top button {
+    margin: 0;
+}
+.top text {
+    font-weight: bold;
+}
+.top .price {
+    color: darkgray;
+}
+.order {
+    border-top:1rpx solid #ccc;
+    border-bottom:1rpx solid #ccc;
+    padding:18rpx 0;
+    width:92%;
+    margin:0 auto;
+    display: flex;
+
+}
+.order image {
+    width:45px;
+    height:59px;
+}
+.order .info .color {
+    font-size: .8em;
+}
+.info text {
+    display:block;
+    padding:15rpx 0;
+    margin-left:15rpx;
+}
+.info text:nth-child(1) {
+    font-weight: bold;
+}
+.info text:nth-child(2) {
+    color: darkgray;
+}
